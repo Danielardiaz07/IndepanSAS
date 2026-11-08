@@ -135,7 +135,7 @@ export default async function ProductPage({ params }: Props) {
             href={priceInquiryUrl(p.name)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex h-11 items-center gap-2 rounded-full border-2 border-ink px-5 text-sm font-bold transition-colors hover:bg-sunken"
+            className="mt-6 inline-flex min-h-11 py-2 items-center gap-2 rounded-full border-2 border-ink px-5 text-sm font-bold transition-colors hover:bg-sunken"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             Preguntar por este producto

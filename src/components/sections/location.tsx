@@ -29,7 +29,7 @@ export function Location() {
                 href={site.address.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-btn px-5 font-bold text-on-btn"
+                className="inline-flex min-h-12 py-2 items-center gap-2 rounded-full bg-btn px-5 font-bold text-on-btn"
               >
                 <Navigation className="size-5" aria-hidden="true" />
                 Cómo llegar
@@ -38,7 +38,7 @@ export function Location() {
                 href={contactUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full border-2 border-ink px-5 font-bold transition-colors hover:bg-sunken"
+                className="inline-flex min-h-12 py-2 items-center gap-2 rounded-full border-2 border-ink px-5 font-bold transition-colors hover:bg-sunken"
               >
                 <MessageCircle className="size-5" aria-hidden="true" />
                 {site.whatsapp.display}

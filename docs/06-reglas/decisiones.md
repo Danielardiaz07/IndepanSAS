@@ -35,4 +35,5 @@
 | D-31 | 2026-11-08 | Hero móvil sin mascota: título, buscador, dos botones y accesos rápidos a departamentos caben en la primera pantalla. La mascota se muestra desde md | Feedback del cliente: el hero se veía largo y desordenado |
 | D-32 | 2026-11-08 | Solo la barra de búsqueda es fija en el catálogo; filtros y orden se desplazan con la página | La barra completa ocupaba ~1/3 de la pantalla móvil |
 | D-33 | 2026-11-08 | Controles táctiles de 44 px como mínimo y texto de al menos 13 px | Usabilidad y accesibilidad móvil |
+| D-34 | 2026-11-08 | Robustez ante letra grande del sistema: botones y enlaces usan altura mínima (no fija), los botones del hero pasan a dos filas si no caben, los selectores no pueden ensanchar la página y la barra inferior oculta "Ubicación" cuando hay poco espacio (container query en rem) | Reporte del cliente: "Ver productos" se partía en un celular con letra más grande |
 

@@ -67,19 +67,19 @@ export function Hero({ departments }: { departments: Department[] }) {
             </div>
             <button
               type="submit"
-              className="h-12 shrink-0 rounded-full bg-btn px-6 text-base font-bold text-on-btn transition-transform active:scale-95"
+              className="min-h-12 py-2 shrink-0 rounded-full bg-btn px-6 text-base font-bold text-on-btn transition-transform active:scale-95"
             >
               Buscar
             </button>
           </form>
 
           <div
-            className="hero-rise mt-4 grid max-w-xl grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4"
+            className="hero-rise mt-4 flex max-w-xl flex-wrap gap-3"
             style={{ "--i": 3 } as React.CSSProperties}
           >
             <Link
               href="/productos"
-              className="group flex h-12 items-center justify-center gap-2 rounded-full bg-on-brand px-4 text-base font-extrabold text-brand sm:px-6"
+              className="group flex min-h-12 flex-1 basis-40 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-on-brand px-5 py-2 text-base font-extrabold text-brand"
             >
               Ver productos
               <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -88,7 +88,7 @@ export function Hero({ departments }: { departments: Department[] }) {
               href={contactUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-12 items-center justify-center gap-2 rounded-full border-2 border-on-brand px-4 text-base font-bold transition-colors hover:bg-on-brand hover:text-brand sm:px-6"
+              className="flex min-h-12 flex-1 basis-40 items-center justify-center gap-2 whitespace-nowrap rounded-full border-2 border-on-brand px-5 py-2 text-base font-bold transition-colors hover:bg-on-brand hover:text-brand"
             >
               <MessageCircle className="size-5" aria-hidden="true" />
               Escríbenos

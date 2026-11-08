@@ -222,7 +222,7 @@ export function ProductBrowser({
             {loading ? "Buscando en el catálogo…" : `${total} ${total === 1 ? "producto" : "productos"}`}
           </p>
           {brands.length > 1 ? (
-            <label className="flex items-center gap-2">
+            <label className="flex min-w-0 max-w-full items-center gap-2">
               <span className="text-muted">Marca</span>
               <select
                 value={brand}
@@ -231,7 +231,7 @@ export function ProductBrowser({
                   setBrand(e.target.value);
                   resetPaging();
                 }}
-                className="h-11 max-w-44 rounded-full border border-line bg-surface px-3 text-sm font-semibold"
+                className="h-11 min-w-0 max-w-44 rounded-full border border-line bg-surface px-3 text-sm font-semibold"
               >
                 <option value="">Todas</option>
                 {brands.map((b) => (
@@ -242,7 +242,7 @@ export function ProductBrowser({
               </select>
             </label>
           ) : null}
-          <label className="flex items-center gap-2">
+          <label className="flex min-w-0 max-w-full items-center gap-2">
             <span className="text-muted">Ordenar</span>
             <select
               value={sort}
@@ -251,7 +251,7 @@ export function ProductBrowser({
                 setSort(e.target.value as Sort);
                 resetPaging();
               }}
-              className="h-11 rounded-full border border-line bg-surface px-3 text-sm font-semibold"
+              className="h-11 min-w-0 max-w-[14rem] rounded-full border border-line bg-surface px-3 text-sm font-semibold"
             >
               <option value="name">{query.trim() ? "Más relevantes" : "Nombre (A-Z)"}</option>
               <option value="price-asc">Precio: menor a mayor</option>
@@ -283,7 +283,7 @@ export function ProductBrowser({
             <p className="mt-2 text-muted">
               Prueba con otra palabra o escríbenos por WhatsApp: puede que lo tengamos y no esté publicado.
             </p>
-            <button type="button" onClick={clearAll} className="mt-5 h-11 rounded-full bg-btn px-6 font-bold text-on-btn">
+            <button type="button" onClick={clearAll} className="mt-5 min-h-11 py-2 rounded-full bg-btn px-6 font-bold text-on-btn">
               Ver todos los productos
             </button>
           </div>
@@ -297,7 +297,7 @@ export function ProductBrowser({
                 engage();
                 setVisible((v) => v + PAGE);
               }}
-              className="h-12 rounded-full border-2 border-ink px-8 font-bold transition-colors hover:bg-sunken"
+              className="min-h-12 py-2 rounded-full border-2 border-ink px-8 font-bold transition-colors hover:bg-sunken"
             >
               Ver más productos
               <span className="tabular ml-2 text-muted">

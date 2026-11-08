@@ -43,7 +43,7 @@ export function Header() {
           <button
             type="button"
             onClick={open}
-            className="relative hidden h-11 items-center gap-2 rounded-full bg-btn px-4 text-sm font-bold text-on-btn transition-transform active:scale-95 md:flex"
+            className="relative hidden min-h-11 py-2 items-center gap-2 rounded-full bg-btn px-4 text-sm font-bold text-on-btn transition-transform active:scale-95 md:flex"
             aria-label={`Abrir mi pedido${ready && count > 0 ? `, ${count} ${count === 1 ? "producto" : "productos"}` : ""}`}
           >
             <ShoppingBasket className="size-5" aria-hidden="true" />

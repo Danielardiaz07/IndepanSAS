@@ -114,7 +114,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
               <Link
                 href="/productos"
                 onClick={close}
-                className="mt-2 flex h-12 items-center rounded-full bg-btn px-6 font-bold text-on-btn"
+                className="mt-2 flex min-h-12 py-2 items-center rounded-full bg-btn px-6 font-bold text-on-btn"
               >
                 Ver productos
               </Link>
@@ -180,7 +180,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                     ).map(({ v, label, icon: Icon }) => (
                       <label
                         key={v}
-                        className={`flex h-14 cursor-pointer items-center gap-2 rounded-xl border-2 px-3 text-sm font-bold has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[color:var(--focus)] ${
+                        className={`flex min-h-14 py-2 cursor-pointer items-center gap-2 rounded-xl border-2 px-3 text-sm font-bold has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[color:var(--focus)] ${
                           form.delivery === v ? "border-ink bg-sun" : "border-line bg-surface"
                         }`}
                       >
@@ -276,7 +276,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                         /* sin permiso de portapapeles */
                       }
                     }}
-                    className="flex h-12 items-center justify-center gap-2 rounded-full border-2 border-ink text-sm font-bold"
+                    className="flex min-h-12 py-2 items-center justify-center gap-2 rounded-full border-2 border-ink text-sm font-bold"
                   >
                     <Copy className="size-4" aria-hidden="true" />
                     {copied ? "Copiado" : "Copiar pedido"}
@@ -289,7 +289,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                       setSent(false);
                       close();
                     }}
-                    className="h-12 rounded-full bg-btn text-sm font-bold text-on-btn"
+                    className="min-h-12 py-2 rounded-full bg-btn text-sm font-bold text-on-btn"
                   >
                     Vaciar y terminar
                   </button>
@@ -315,7 +315,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                     });
                     setSent(true);
                   }}
-                  className="flex h-14 w-full items-center justify-center gap-2 rounded-full bg-wa px-4 text-base font-extrabold text-[#0b2e17] transition-transform active:scale-[0.98]"
+                  className="flex min-h-14 py-2 w-full items-center justify-center gap-2 rounded-full bg-wa px-4 text-base font-extrabold text-[#0b2e17] transition-transform active:scale-[0.98]"
                 >
                   <MessageCircle className="size-5" aria-hidden="true" />
                   Enviar pedido por WhatsApp
