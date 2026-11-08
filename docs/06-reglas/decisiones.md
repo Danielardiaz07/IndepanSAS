@@ -31,3 +31,8 @@
 | D-27 | 2026-11-07 | Búsqueda en el cliente con minisearch y catálogo compacto cargado bajo demanda | 973 productos caben en ~40 KB comprimidos |
 | D-28 | 2026-11-07 | Del skill `impeccable` se aplicaron sus reglas de diseño, pero no se ejecutó su launcher (descarga y corre un binario externo) ni sus hooks | Seguridad: no ejecutar código no verificado sin autorización |
 | D-29 | 2026-11-07 | Los productos sin precio llevan `noindex` y no entran al sitemap | SEO: solo se indexan páginas con datos completos |
+| D-30 | 2026-11-08 | Enfoque mobile-first: en móvil la navegación vive en una barra inferior (Inicio, Productos, Pedido, Ubicación, WhatsApp); el encabezado solo lleva logo y tema. El botón flotante de WhatsApp queda solo en pantallas md+ | Feedback del cliente: en móvil no había acceso directo a productos |
+| D-31 | 2026-11-08 | Hero móvil sin mascota: título, buscador, dos botones y accesos rápidos a departamentos caben en la primera pantalla. La mascota se muestra desde md | Feedback del cliente: el hero se veía largo y desordenado |
+| D-32 | 2026-11-08 | Solo la barra de búsqueda es fija en el catálogo; filtros y orden se desplazan con la página | La barra completa ocupaba ~1/3 de la pantalla móvil |
+| D-33 | 2026-11-08 | Controles táctiles de 44 px como mínimo y texto de al menos 13 px | Usabilidad y accesibilidad móvil |
+

@@ -9,7 +9,7 @@ import { priceInquiryUrl } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
 import type { CompactProduct } from "@/types/catalog";
 
-export function AddToCart({ product, compact }: { product: CompactProduct; compact?: boolean }) {
+export function AddToCart({ product }: { product: CompactProduct }) {
   const { add } = useCart();
   const [qty, setQty] = useState(product.mn);
   const [added, setAdded] = useState(false);
@@ -45,7 +45,7 @@ export function AddToCart({ product, compact }: { product: CompactProduct; compa
 
   return (
     <div className="space-y-2">
-      <QuantityStepper product={product} value={qty} onChange={setQty} compact={compact} />
+      <QuantityStepper product={product} value={qty} onChange={setQty} />
       <button
         type="button"
         onClick={() => {

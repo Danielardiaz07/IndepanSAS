@@ -51,13 +51,13 @@ export default async function DepartmentPage({ params }: Props) {
       <nav aria-label="Ruta de navegación" className="text-sm text-muted">
         <ol className="flex flex-wrap items-center gap-x-2">
           <li>
-            <Link href="/" className="hover:text-ink hover:underline">
+            <Link href="/" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">
               Inicio
             </Link>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <Link href="/productos" className="hover:text-ink hover:underline">
+            <Link href="/productos" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">
               Productos
             </Link>
           </li>

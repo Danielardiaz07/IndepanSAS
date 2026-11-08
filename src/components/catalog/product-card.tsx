@@ -38,17 +38,17 @@ export function ProductCard({
       <div className="flex flex-1 flex-col gap-3 p-3 sm:p-4">
         <div className="flex-1">
           <Heading className="font-display text-[0.95rem] font-bold leading-snug sm:text-base">
-            <Link href={href} className="hover:text-accent">
+            <Link href={href} className="inline-block py-1 hover:text-accent">
               {product.n}
             </Link>
           </Heading>
-          {product.b ? <p className="mt-1 text-xs text-muted">{product.b}</p> : null}
+          {product.b ? <p className="mt-1 text-[0.8125rem] text-muted">{product.b}</p> : null}
         </div>
         <p className="tabular font-display text-xl font-extrabold leading-none">
           {priceText ?? <span className="text-base font-bold text-muted">Precio por consultar</span>}
           {priceText ? <span className="text-sm font-semibold text-muted">{unitNote[product.u]}</span> : null}
         </p>
-        <AddToCart product={product} compact />
+        <AddToCart product={product} />
       </div>
     </article>
   );

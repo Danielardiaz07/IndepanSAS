@@ -7,6 +7,7 @@ import { site } from "@/config/site";
 import { CartProvider } from "@/components/cart/cart-provider";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { Header } from "@/components/layout/header";
+import { BottomNav } from "@/components/layout/bottom-nav";
 import { Footer } from "@/components/layout/footer";
 import { WhatsAppFab } from "@/components/layout/whatsapp-fab";
 import { JsonLd } from "@/components/ui/json-ld";
@@ -73,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body className="flex min-h-dvh flex-col antialiased">
+      <body className="flex min-h-dvh flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] antialiased md:pb-0">
         <a
           href="#contenido"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-btn focus:px-4 focus:py-2 focus:text-on-btn"
@@ -87,6 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
           <WhatsAppFab />
+          <BottomNav />
           <CartDrawer />
         </CartProvider>
         <JsonLd data={localBusinessJsonLd()} />

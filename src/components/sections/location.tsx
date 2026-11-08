@@ -7,12 +7,12 @@ const paymentIcons = { Efectivo: Banknote, "Transferencia bancaria": Landmark, "
 
 export function Location() {
   return (
-    <section id="ubicacion" aria-labelledby="ubicacion-titulo" className="mx-auto max-w-6xl px-4 pt-20 md:pt-28">
-      <h2 id="ubicacion-titulo" className="font-display text-4xl font-extrabold leading-tight tracking-tight text-balance sm:text-5xl">
+    <section id="ubicacion" aria-labelledby="ubicacion-titulo" className="mx-auto max-w-6xl px-4 pt-14 md:pt-28">
+      <h2 id="ubicacion-titulo" className="font-display text-3xl font-extrabold leading-tight tracking-tight text-balance sm:text-5xl">
         Visítanos en el Mercado de Valledupar
       </h2>
 
-      <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="mt-6 grid grid-cols-1 gap-8 sm:mt-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-8">
           <div>
             <p className="flex items-start gap-3 font-display text-2xl font-bold leading-snug">
@@ -63,12 +63,15 @@ export function Location() {
 
           <div>
             <h3 className="font-display text-xl font-bold">Medios de pago</h3>
-            <ul className="mt-3 flex flex-wrap gap-2">
+            <ul className="mt-3 grid grid-cols-3 gap-2 sm:max-w-md">
               {site.payments.map((p) => {
                 const Icon = paymentIcons[p as keyof typeof paymentIcons] ?? Banknote;
                 return (
-                  <li key={p} className="inline-flex h-11 items-center gap-2 rounded-full bg-sun px-4 text-sm font-bold">
-                    <Icon className="size-5" aria-hidden="true" />
+                  <li
+                    key={p}
+                    className="flex min-h-24 flex-col items-center justify-center gap-2 rounded-2xl bg-sun px-2 py-3 text-center text-sm font-bold leading-tight"
+                  >
+                    <Icon className="size-7" aria-hidden="true" />
                     {p}
                   </li>
                 );

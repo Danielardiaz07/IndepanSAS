@@ -132,7 +132,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                       <button
                         type="button"
                         onClick={() => remove(l.product.c)}
-                        className="grid size-9 shrink-0 place-items-center rounded-full text-muted hover:bg-sunken hover:text-ink"
+                        className="grid size-11 shrink-0 place-items-center rounded-full text-muted hover:bg-sunken hover:text-ink"
                         aria-label={`Quitar ${l.product.n}`}
                       >
                         <Trash2 className="size-4" aria-hidden="true" />
@@ -140,12 +140,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                     </div>
                     <div className="mt-2 flex items-center justify-between gap-3">
                       <div className="w-40">
-                        <QuantityStepper
-                          product={l.product}
-                          value={l.qty}
-                          onChange={(q) => setQty(l.product, q)}
-                          compact
-                        />
+                        <QuantityStepper product={l.product} value={l.qty} onChange={(q) => setQty(l.product, q)} />
                       </div>
                       <p className="tabular font-display text-lg font-extrabold">{formatCOP(l.total)}</p>
                     </div>
@@ -157,7 +152,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                 <p className="font-display text-lg font-bold">Total estimado</p>
                 <p className="tabular font-display text-3xl font-extrabold">{formatCOP(total)}</p>
               </div>
-              <p className="mt-1 text-xs text-muted">
+              <p className="mt-1 text-[0.8125rem] leading-snug text-muted">
                 Precios referenciales, corte del {site.priceCutoff.label}. Te confirmamos el valor final y la disponibilidad.
               </p>
 
@@ -325,7 +320,7 @@ function CartPanel({ uid, close }: { uid: string; close: () => void }) {
                   <MessageCircle className="size-5" aria-hidden="true" />
                   Enviar pedido por WhatsApp
                 </a>
-                <div className="mt-2 flex items-center justify-between text-xs text-muted">
+                <div className="mt-2 flex items-center justify-between text-[0.8125rem] text-muted">
                   <span>{resolved.length} {resolved.length === 1 ? "producto" : "productos"}</span>
                   <button
                     type="button"

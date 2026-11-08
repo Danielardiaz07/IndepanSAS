@@ -10,7 +10,6 @@ interface Props {
   product: Pick<CompactProduct, "n" | "u" | "mn" | "st">;
   value: number;
   onChange: (qty: number) => void;
-  compact?: boolean;
 }
 
 const unitSuffix = { un: "", kg: "kg", g: "g" } as const;
@@ -20,7 +19,7 @@ function toInput(n: number): string {
 }
 
 /** Selector de cantidad que respeta el mínimo y el paso de cada producto (RF-13). */
-export function QuantityStepper({ product, value, onChange, compact }: Props) {
+export function QuantityStepper({ product, value, onChange }: Props) {
   const id = useId();
   const [text, setText] = useState(toInput(value));
   const [prevValue, setPrevValue] = useState(value);
@@ -37,7 +36,7 @@ export function QuantityStepper({ product, value, onChange, compact }: Props) {
     if (next !== value) onChange(next);
   };
 
-  const size = compact ? "size-9" : "size-11";
+  const size = "size-11";
   const suffix = unitSuffix[product.u];
 
   return (
@@ -63,10 +62,10 @@ export function QuantityStepper({ product, value, onChange, compact }: Props) {
           onChange={(e) => setText(e.target.value)}
           onBlur={(e) => commit(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && (e.currentTarget.blur(), undefined)}
-          className="tabular w-[3.2ch] min-w-0 bg-transparent text-center text-base font-bold outline-offset-4"
-          style={{ width: `${Math.max(text.length, 2) + 0.6}ch` }}
+          className="tabular h-11 min-w-9 bg-transparent text-center text-base font-bold outline-offset-[-4px]"
+          style={{ width: `${Math.max(text.length, 2) + 1}ch` }}
         />
-        {suffix ? <span className="text-xs font-semibold text-muted">{suffix}</span> : null}
+        {suffix ? <span className="text-[0.8125rem] font-semibold text-muted">{suffix}</span> : null}
       </div>
       <button
         type="button"

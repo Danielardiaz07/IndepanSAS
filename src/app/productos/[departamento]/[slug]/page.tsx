@@ -62,13 +62,13 @@ export default async function ProductPage({ params }: Props) {
       <nav aria-label="Ruta de navegación" className="text-sm text-muted">
         <ol className="flex flex-wrap items-center gap-x-2">
           <li>
-            <Link href="/productos" className="hover:text-ink hover:underline">
+            <Link href="/productos" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">
               Productos
             </Link>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <Link href={departmentPath(dept.slug)} className="hover:text-ink hover:underline">
+            <Link href={departmentPath(dept.slug)} className="inline-flex min-h-11 items-center hover:text-ink hover:underline">
               {dept.name}
             </Link>
           </li>

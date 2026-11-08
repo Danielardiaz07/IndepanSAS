@@ -43,10 +43,10 @@ export function Footer() {
 
         <nav aria-label="Departamentos">
           <p className="font-display text-lg font-bold">Productos</p>
-          <ul className="mt-3 space-y-1.5 text-sm">
+          <ul className="mt-2 text-sm">
             {departments.map((d) => (
               <li key={d.slug}>
-                <Link href={departmentPath(d.slug)} className="opacity-80 transition-opacity hover:opacity-100">
+                <Link href={departmentPath(d.slug)} className="flex min-h-11 items-center opacity-85 transition-opacity hover:opacity-100">
                   {d.name}
                 </Link>
               </li>
@@ -56,10 +56,10 @@ export function Footer() {
 
         <div>
           <p className="font-display text-lg font-bold">Visítanos</p>
-          <address className="mt-3 space-y-2 text-sm not-italic opacity-90">
+          <address className="mt-2 space-y-1 text-sm not-italic opacity-90">
             <p>{site.address.full}</p>
             <p>
-              <a href={contactUrl()} target="_blank" rel="noopener noreferrer" className="underline">
+              <a href={contactUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center underline">
                 WhatsApp {site.whatsapp.display}
               </a>
             </p>
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <p className="mx-auto max-w-6xl px-4 py-5 text-xs opacity-70">
+        <p className="mx-auto max-w-6xl px-4 py-5 text-[0.8125rem] opacity-80">
           © {new Date().getFullYear()} {site.name}. Los precios son referenciales (corte del {site.priceCutoff.label}) y la
           tienda confirma el valor final y la disponibilidad.
         </p>

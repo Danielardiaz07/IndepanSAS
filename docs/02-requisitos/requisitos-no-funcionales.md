@@ -19,3 +19,6 @@
 | RNF-15 | Calidad | Lint y typecheck sin errores; pruebas unitarias para la lógica del carrito y del generador de mensajes | CI local |
 | RNF-16 | Disponibilidad | Hosting estático/edge en Vercel; sin dependencias de backend propio | Despliegue |
 | RNF-17 | Localización | Interfaz solo en español; formato de precios y números según config | Revisión |
+| RNF-18 | Usabilidad móvil | Navegación principal accesible con el pulgar (barra inferior); acciones clave (buscar, ver productos, contactar) visibles sin desplazarse; sin desbordamiento horizontal desde 320 px | Prueba en emulación 320/360/390 px |
+| RNF-19 | Accesibilidad | Controles táctiles ≥ 44 px, texto ≥ 13 px, un solo h1 por página, imágenes con alt, funciona con modo claro y oscuro; Lighthouse accesibilidad 100 en ambos temas | Lighthouse + auditoría con script |
+

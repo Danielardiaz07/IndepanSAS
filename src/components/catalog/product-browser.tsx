@@ -128,7 +128,7 @@ export function ProductBrowser({
 
   return (
     <section aria-label={heading ?? "Catálogo de productos"}>
-      <div className="sticky top-16 z-20 -mx-4 border-b border-line bg-ground/95 px-4 py-3 backdrop-blur-md">
+      <div className="sticky top-16 z-20 -mx-4 border-b border-line bg-ground px-4 py-2.5">
         <div className="relative">
           <Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted" aria-hidden="true" />
           <label htmlFor="buscar" className="sr-only">
@@ -145,7 +145,7 @@ export function ProductBrowser({
               resetPaging();
               if (e.target.value.length === 3) trackEvent("search", { search_term: e.target.value });
             }}
-            placeholder={departmentSlug ? "Buscar en este departamento…" : "Buscar harina, levadura, molde, bolsa…"}
+            placeholder={departmentSlug ? "Buscar en este departamento…" : "Buscar en el catálogo…"}
             autoComplete="off"
             enterKeyHint="search"
             className="h-12 w-full rounded-full border border-line bg-surface pl-12 pr-12 text-base font-medium placeholder:text-muted/80"
@@ -157,14 +157,17 @@ export function ProductBrowser({
                 setQuery("");
                 resetPaging();
               }}
-              className="absolute right-1.5 top-1/2 grid size-9 -translate-y-1/2 place-items-center rounded-full hover:bg-sunken"
+              className="absolute right-0.5 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full hover:bg-sunken"
               aria-label="Borrar búsqueda"
             >
               <X className="size-5" aria-hidden="true" />
             </button>
           ) : null}
         </div>
+      </div>
 
+      {/* Filtros: se desplazan con la página para no ocupar la pantalla del móvil */}
+      <div className="pt-3">
         {departments && !departmentSlug ? (
           <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none]" role="group" aria-label="Departamentos">
             <Chip active={dept === null} onClick={() => { engage(); setDept(null); setSub(null); setBrand(""); resetPaging(); }}>
@@ -228,7 +231,7 @@ export function ProductBrowser({
                   setBrand(e.target.value);
                   resetPaging();
                 }}
-                className="h-9 max-w-44 rounded-full border border-line bg-surface px-3 text-sm font-semibold"
+                className="h-11 max-w-44 rounded-full border border-line bg-surface px-3 text-sm font-semibold"
               >
                 <option value="">Todas</option>
                 {brands.map((b) => (
@@ -248,7 +251,7 @@ export function ProductBrowser({
                 setSort(e.target.value as Sort);
                 resetPaging();
               }}
-              className="h-9 rounded-full border border-line bg-surface px-3 text-sm font-semibold"
+              className="h-11 rounded-full border border-line bg-surface px-3 text-sm font-semibold"
             >
               <option value="name">{query.trim() ? "Más relevantes" : "Nombre (A-Z)"}</option>
               <option value="price-asc">Precio: menor a mayor</option>
@@ -314,7 +317,7 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`h-10 shrink-0 whitespace-nowrap rounded-full border px-4 text-sm font-bold transition-colors ${
+      className={`h-11 shrink-0 whitespace-nowrap rounded-full border px-4 text-sm font-bold transition-colors ${
         active ? "border-transparent bg-btn text-on-btn" : "border-line bg-surface hover:bg-sunken"
       }`}
     >

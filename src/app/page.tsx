@@ -10,7 +10,7 @@ export default function HomePage() {
   const productCount = getAllProducts().length;
   return (
     <>
-      <Hero />
+      <Hero departments={departments} />
       <Departments departments={departments} />
       <HowItWorks />
       <About productCount={productCount} />
